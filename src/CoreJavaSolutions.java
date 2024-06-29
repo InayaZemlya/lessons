@@ -44,7 +44,7 @@ public class CoreJavaSolutions {
      */
     public static boolean isPalindrome(String testValuePolimorfString) {
         String replaced = testValuePolimorfString.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
-        String гщг = new StringBuilder(replaced).reverse().toString();
+        String newValue = new StringBuilder(replaced).reverse().toString();
         return  replaced.equals(newValue);
 
     }
