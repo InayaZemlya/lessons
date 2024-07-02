@@ -29,9 +29,23 @@ public class CoreJavaSolutions {
 
     /**
      * Реализуйте метод, возвращающий true, если среди четырех его аргументов
-     *ровно два истинны (любые). Составьте формулу с использованием булевых операторов
+     * ровно два истинны (любые). Составьте формулу с использованием булевых операторов
      */
     public static boolean isTwoOfFour(boolean a, boolean b, boolean c, boolean d) {
         return ((a ^ b) & (c ^ d)) | ((a ^ c) & (b ^ d)) | ((a ^ d) & (b ^ c));
+    }
+
+    /**
+     * Реализуйте метод, проверяющий, является ли заданная строка палиндромом.
+     * При определении "палиндромности" строки должны учитываться только буквы и цифры.
+     * А пробелы, знаки препинания, а также регистр символов должны игнорироваться.
+     * Гарантируется, что в метод попадают только строки, состоящие из символов ASCII
+     * (цифры, латинские буквы, знаки препинания)
+     */
+    public static boolean isPalindrome(String text) {
+        String replaced = text.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        String reversed = new StringBuilder(replaced).reverse().toString();
+        return replaced.equals(reversed);
+
     }
 }
