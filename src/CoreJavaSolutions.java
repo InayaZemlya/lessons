@@ -42,10 +42,10 @@ public class CoreJavaSolutions {
      * Гарантируется, что в метод попадают только строки, состоящие из символов ASCII
      * (цифры, латинские буквы, знаки препинания)
      */
-    public static boolean isPalindrome(String testValuePolimorfString) {
-        String replaced = testValuePolimorfString.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
-        String newValue = new StringBuilder(replaced).reverse().toString();
-        return  replaced.equals(newValue);
+    public static boolean isPalindrome(String Text) {
+        String s = Text.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        String newValue = new StringBuilder(s).reverse().toString();
+        return s.equals(newValue);
 
     }
 }

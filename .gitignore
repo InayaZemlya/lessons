@@ -2,6 +2,7 @@
 out/
 .idea/
 src/book/
+src/Alichev
 
 ### Eclipse ###
 .apt_generated
